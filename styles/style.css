@@ -3,3 +3,44 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.section__title {
+  margin-block-start: 45px;
+  margin-block-end: 20px;
+  color: var(--title-accent-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  max-inline-size: 340px;
+}
+
+.section,
+.section_what {
+  padding: 0 10px;
+  background-image: none;
+  margin-block-end: 12px;
+}
+
+h2 + .title-decor,
+.article__info {
+  margin-block-start: 10px;
+  margin-block-end: 20px;
+}
+
+.article__subtitle {
+  margin-block-end: 10px;
+  color: var(--subtitle-accent-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.article__info {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}

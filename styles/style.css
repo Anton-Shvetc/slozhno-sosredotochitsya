@@ -18,6 +18,11 @@
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.decorated-zone {
+  position: relative;
+  min-block-size: 100vh;
+}
+
 :is(.header, .footer)::before,
 :is(.header, .footer)::after {
   content: "";
@@ -41,6 +46,36 @@
   align-self: end;
   border-inline-start: 1px solid var(--decoration-color);
   border-block-end: 1px solid var(--decoration-color);
+}
+
+.decor-rec {
+  grid-area: header;
+  display: flex;
+  gap: 3px;
+  justify-content: flex-end;
+  margin: var(--decor-margin);
+}
+
+.decor-rec::before {
+  content: var(--rec);
+  margin-inline-end: 28px;
+  text-transform: uppercase;
+  line-height: 25px;
+  color: var(--decoration-color);
+}
+
+.decor-rec::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: var(--bulb);
+  vertical-align: middle;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--decoration-color);
+  box-shadow: 0 0 4px 2px var(--decoration-color);
 }
 
 .header {
@@ -112,7 +147,7 @@
 
 .title-decor {
   background: var(--background-accent);
-  color:var(--title-color);
+  color: var(--title-color);
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 18px;
@@ -122,7 +157,6 @@
 .accent-shadow-text {
   text-shadow: 4px 4px 0px var(--title-shadow);
 }
-
 
 .section__title {
   margin-block-start: 45px;
@@ -135,7 +169,11 @@
   max-inline-size: 340px;
 }
 
-.section,
+.link {
+  text-shadow: 2px 2px 0px var(--title-shadow);
+  text-decoration: none;
+}
+ф .section,
 .section__what {
   padding: 0 10px;
   background-image: none;
@@ -214,10 +252,7 @@ h2 + .title-decor,
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
 }
 
-
-
 /* Адаптив */
-
 
 /* Header */
 
@@ -352,7 +387,7 @@ h2 + .title-decor,
   }
 
   @media (width >= 1024px) {
-    .content__block_what {
+    .section__what {
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(3, minmax(315px, max-content));

@@ -173,7 +173,7 @@
   text-shadow: 2px 2px 0px var(--title-shadow);
   text-decoration: none;
 }
-ф .section,
+.section,
 .section__what {
   padding: 0 10px;
   background-image: none;

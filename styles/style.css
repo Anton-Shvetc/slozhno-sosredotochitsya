@@ -209,6 +209,7 @@ h2 + .title-decor,
 }
 
 /* Секция с изображениями  */
+
 .pictures__section {
   margin-block-start: 50px;
   padding: 0 10px;
@@ -486,7 +487,7 @@ h2 + .title-decor,
   }
 
   @media (width: 1024px) {
-    .pictures__section {
+    .section__pictures {
       margin-block-end: 65px;
       min-block-size: 1050px;
     }

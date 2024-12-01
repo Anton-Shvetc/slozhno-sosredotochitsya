@@ -128,30 +128,6 @@
     }
   }
 
-  @media (width >= 1024px) {
-    .section__what {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(3, minmax(315px, max-content));
-    }
-
-    .section__title {
-      max-inline-size: 315px;
-      margin-block-start: 2px;
-      margin-block-end: 0;
-    }
-
-    .section__what > .section__title {
-      inline-size: 315px;
-      grid-row: auto;
-    }
-
-    .section__what > .section__article {
-      grid-column-start: auto;
-      grid-row-start: 2;
-    }
-  }
-
   @media (min-width: 1024px) {
     .header {
       grid-template-areas:
@@ -185,12 +161,12 @@
       margin-block-end: 80px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr auto;
       grid-template-areas:
         "sunset sunset ice-cream"
         "cassette books ice-cream"
-        "cassette street street"
         "cassette street street";
+
       gap: 20px;
     }
 
@@ -225,12 +201,9 @@
     }
   }
 
-  @media (width: 1024px) {
-    .section__pictures {
-      margin-block-end: 65px;
-      min-block-size: 1050px;
-    }
-  }
+  /* @media (width: 1024px) {
+
+  } */
 
   @media (width >= 768px) {
     .footer {
@@ -283,5 +256,34 @@
 
   .footer {
     block-size: 98vh;
+  }
+}
+
+@media (width >= 1024px) {
+  .section__what {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, minmax(315px, max-content));
+  }
+
+  .section__title {
+    max-inline-size: 315px;
+    margin-block-start: 2px;
+    margin-block-end: 0;
+  }
+
+  .section__what > .section__title {
+    inline-size: 315px;
+    grid-row: auto;
+  }
+
+  .section__what > .section__article {
+    grid-column-start: auto;
+    grid-row-start: 2;
+  }
+
+  .section__pictures {
+    margin-block-end: 65px;
+    max-block-size: 1048px;
   }
 }

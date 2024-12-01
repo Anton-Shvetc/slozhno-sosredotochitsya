@@ -194,7 +194,7 @@ h2 + .title-decor,
 }
 
 .article__subtitle {
-  margin-block-end: 10px;
+  /* margin-block-end: 10px; */
   color: var(--subtitle-accent-color);
   font-weight: 700;
   font-size: 18px;
